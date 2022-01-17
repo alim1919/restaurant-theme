@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap");
+@font-face {
+  font-family: yekan;
+  src: url("../fonts/Yekan.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+body {
+  direction: rtl;
+  font-family: yekan, sans-serif;
+}
+header {
+  background-color: #3d250d;
+  padding: 15px 0;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+header .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  list-style-type: none;
+}
+header nav ul a {
+  color: white;
+  text-decoration: none;
+  padding: 0 15px;
+  font-size: 1em;
+}
+header nav ul li:first-child a {
+  padding-right: 0px;
+}
+
+header .logo {
+  font-size: 2em;
+}
+header .logo a {
+  color: wheat;
+  text-decoration: none;
+  font-family: "Mochiy Pop P One", sans-serif;
+}
