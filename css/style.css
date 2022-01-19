@@ -65,9 +65,11 @@ header .logo a {
   font-family: "Mochiy Pop P One", sans-serif;
 }
 
-/* section container {
+section .container {
   background-image: url("../images/hero-bg.jpg");
-} */
+  width: 100%;
+  height: 960px;
+}
 /* section button a {
   padding: 15px;
   color: tomato;
