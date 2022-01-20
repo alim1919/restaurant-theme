@@ -65,12 +65,80 @@ header .logo a {
   font-family: "Mochiy Pop P One", sans-serif;
 }
 
-section .container {
-  background-image: url("../images/hero-bg.jpg");
-  width: 100%;
-  height: 960px;
+section.wellcome {
+  background: url("../images/hero-bg.jpg") no-repeat center/ cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-/* section button a {
-  padding: 15px;
-  color: tomato;
-} */
+.container h1 {
+  font-weight: normal;
+  font-size: 3.5em;
+  color: #fff;
+  /* border-bottom: 1px solid #ffff; */
+  position: relative;
+}
+
+.container h1::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+}
+.container .wellcome-btn {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.wellcome-btn a {
+  display: inline-block;
+  width: 200px;
+  padding: 10px 15px;
+  text-align: center;
+  /* background-color: crimson; */
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+  margin-right: 50px;
+  transition: all 0.3s;
+  border-radius: 5px;
+}
+.wellcome-btn a:first-child {
+  background-color: rgb(255, 255, 255, 0.2);
+  border: 1px solid #fff;
+}
+.wellcome-btn a:first-child:hover {
+  background-color: rgba(247, 212, 15, 1);
+}
+
+.wellcome-btn a:last-child {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid #000;
+}
+.wellcome-btn a:last-child:hover {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+section.menu {
+  background-image: url("../images/001.jpg");
+  padding: 20px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(200px, auto);
+  gap: 20px;
+}
+
+.menu-grid img {
+  width: 100%;
+}
+.menu-grid > div {
+  grid-column: span 2;
+}
