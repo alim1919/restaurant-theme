@@ -1,13 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 @font-face {
-  font-family: yekan;
   src: url("../fonts/Yekan.ttf");
+  font-family: yekan;
 }
 
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   border: none;
+
   box-sizing: border-box;
 }
 
@@ -19,19 +20,22 @@ body {
   direction: rtl;
   font-family: yekan, sans-serif;
 }
+
 header {
   background-color: #3d250d;
-  /* padding: 15px 0;  */
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 1;
+  /* padding: 15px 0; */
 }
+
 .container {
   max-width: 960px;
   margin: 0 auto;
 }
+
 header .header-container {
   display: flex;
   justify-content: space-between;
@@ -42,67 +46,79 @@ header nav ul {
   display: flex;
   list-style-type: none;
 }
+
 header nav ul a {
-  color: white;
+  display: block;
+  text-align: center;
+  color: #fff;
   text-decoration: none;
   padding: 15px;
-  display: block;
-  font-size: 1em;
+  font-weight: 700;
+  border-top: 2px solid transparent;
   transition: all 0.3s;
-  border-top: 3px solid transparent;
-  text-align: center;
 }
 
 header nav ul a:hover,
 header nav ul a.active {
-  border-top-color: #ffebff;
-}
-header nav ul li:first-child a {
-  padding-right: 0px;
+  border-top-color: #ffebca;
+  color: #ffebca;
 }
 
 header .logo {
   font-size: 2em;
 }
+
 header .logo a {
-  color: wheat;
   text-decoration: none;
-  font-family: "Mochiy Pop P One", sans-serif;
+  color: #ffebca;
+  font-family: "Dancing Script", cursive;
 }
 
-section.wellcome {
-  background: url("../images/hero-bg.jpg") no-repeat center/ cover;
-  min-height: 100vh;
+section.welcome {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("../images/hero-bg.jpg") no-repeat center/ cover;
+  min-height: 100vh;
 }
+
 .container h1 {
   font-weight: normal;
   font-size: 3.5em;
   color: #fff;
-  /* border-bottom: 1px solid #ffff; */
+  /* border-bottom: 1px solid #fff; */
+  /* box-shadow: ; */
+  text-shadow: 0px 2px 10px #000;
   position: relative;
+  padding: 0 15px;
 }
 
-.container h1::after {
+.container h1:after {
   content: "";
   display: block;
-  width: 200px;
-  height: 2px;
-  background-color: rgb(255, 255, 255);
+  width: 3px;
+  height: 50px;
+  background-color: #fff;
   position: absolute;
-  left: 50%;
-  margin-left: -100px;
+  /* left: 50%; */
+  /* margin-left: -100px; */
+  right: 0;
+  top: 20px;
 }
-.container .wellcome-btn {
+
+.welcome-btn {
   margin-top: 100px;
   text-align: center;
 }
 
-.wellcome-btn a {
-  display: inline-block;
+.welcome-btn a {
   width: 200px;
+  display: inline-block;
   padding: 10px 15px;
   text-align: center;
   /* background-color: crimson; */
@@ -110,22 +126,26 @@ section.wellcome {
   text-decoration: none;
   font-size: 1.5em;
   margin-right: 50px;
+  border-radius: 3px;
   transition: all 0.3s;
-  border-radius: 5px;
-}
-.wellcome-btn a:first-child {
-  background-color: rgb(255, 255, 255, 0.2);
-  border: 1px solid #fff;
-}
-.wellcome-btn a:first-child:hover {
-  background-color: rgba(247, 212, 15, 1);
 }
 
-.wellcome-btn a:last-child {
-  background-color: rgba(0, 0, 0, 0.7);
+.welcome-btn a:first-child {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid #fff;
+  margin-right: 0;
+}
+
+.welcome-btn a:first-child:hover {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.welcome-btn a:last-child {
+  background-color: rgba(0, 0, 0, 0.5);
   border: 1px solid #000;
 }
-.wellcome-btn a:last-child:hover {
+
+.welcome-btn a:last-child:hover {
   background-color: rgba(0, 0, 0, 1);
 }
 
@@ -134,16 +154,154 @@ section.menu {
   padding: 20px;
 }
 
-.menu-grid {
+.grid-menu {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: minmax(200px, auto);
   gap: 20px;
 }
 
-.menu-grid img {
+.grid-menu img {
   width: 100%;
 }
-.menu-grid > div {
+
+.grid-menu > div {
   grid-column: span 2;
+}
+
+.main-foods,
+.dessert {
+  background-color: #fff;
+}
+
+.main-foods h3,
+.dessert h3 {
+  background-color: #ffebca;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: normal;
+  font-size: 1.75em;
+  color: #3d250d;
+}
+
+.main-foods .row,
+.dessert .row {
+  padding: 0 15px;
+  margin: 15px 0;
+}
+
+.food-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.food-flex .food-name {
+  font-size: 1.25em;
+  font-weight: 600;
+  padding-left: 10px;
+}
+
+.food-flex .food-dots {
+  flex-grow: 1;
+  background-image: radial-gradient(
+    circle closest-side,
+    #b3b3b3 99%,
+    transparent 100%
+  );
+  background-position: 50% 50%;
+  background-size: 4px 2px;
+  height: 2px;
+  background-repeat: repeat-x;
+}
+
+.food-flex .food-price {
+  font-style: italic;
+  color: #3d250d;
+  font-size: 1.05em;
+  font-weight: 600;
+  padding-right: 10px;
+}
+
+.main-foods .details,
+.dessert .details {
+  font-size: 0.85em;
+  font-weight: 600;
+}
+
+section.reserv {
+  padding: 20px;
+  background: url("../images/reviews-bg.jpg") no-repeat center/ cover;
+}
+
+.reserv-container {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  padding: 30px 70px;
+}
+
+.reserv-container h2 {
+  font-size: 2.5em;
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+
+.reserv-container p {
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+.reserv-container p span {
+  font-weight: 600;
+}
+
+.reserv-container form {
+  margin-top: 30px;
+}
+
+.form-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.form-flex > div {
+  padding: 0 10px;
+  flex-grow: 1;
+  flex-basis: 50%;
+  text-align: right;
+}
+
+.form-flex input {
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+  padding: 7px 15px;
+  border-radius: 3px;
+  font-family: yekan, sans-serif;
+  font-size: 17px;
+}
+
+.form-flex input:focus {
+  outline: none;
+}
+
+.form-flex label {
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.form-btn {
+  padding: 0 10px;
+  margin: 40px 0;
+}
+
+.form-btn button {
+  display: block;
+  width: 100%;
+  padding: 7px 15px;
+  font-family: yekan, sans-serif;
+  border-radius: 3px;
+  font-size: 17px;
 }
